@@ -6,7 +6,7 @@ class Model(nn.Module):
     def __init__(self):
         super().__init__()
         
-    def fit(self,loss,optimizer,callbacks=None):
+    def fit(self,x,y,loss,optimizer,callbacks=None):
         yy=self.forward(x)
         l=loss(yy,y)
         l.backward()
